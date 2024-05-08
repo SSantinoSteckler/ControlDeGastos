@@ -9,7 +9,7 @@ export const ExpenseList = () => {
     ? state.expenses.filter((elem) => elem.category === state.currentCategory)
     : state.expenses;
 
-  const isEmpty = useMemo(() => state.expenses.length === 0, [state]);
+  const isEmpty = useMemo(() => filteredExpenses.length === 0, [state]);
   return (
     <div className='mt-10'>
       {isEmpty ? (
